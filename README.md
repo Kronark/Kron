@@ -1,2 +1,2 @@
 # Kron
-A highly optimised database system for fast operations and minimal but optimal memory usage. Written in Ark it aims to get the most out of the provided storage space.
+A fast and scalable high level language that provides frontend and backend capabilities simultaneously with an emphasis on code readability. It' supposed to combine the best of multiple languages: the speed of C++, the simple syntax of python and the range of javascript.
