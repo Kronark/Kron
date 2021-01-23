@@ -2,6 +2,7 @@
 
 
 
+
 # PRIMITIVE DATATYPES
 
 
@@ -45,4 +46,63 @@ complex32 c = 34 + 43i;
 complex64 c2 = -42 + 562.5i;
 complex128 c3 = 234.87653 - 234567.98i;
 
+
+# characters
+# number signifies bits in memory
+# --> char8: utf8 characters
+# --> char16: utf16 characters
+
+char8 ch = 'h';
+char16 ch2 = '⻤';
+
+
+# booleans
+# stored as either 0 or 1
+
+bool b = True;
+bool b2 = False;
+
+
+
+
+# HIGHER DATATYPES
+
+
+# lists
+
+# maps
+
+# strings
+
+# tables
+
+
+
+
+# CORE
+
+
+# imports
+# purely URL based
+# --> packages are imported via URL and cached on first use
+# --> other local resources are imported via filepath
+# explicit permissions can be added if necessary
+
+import "...";
+import "..." grant-file-access;
+
+
+
+
+# visibility
+# --> public: visible to imports
+# --> private: invisible to imports
+# --> protected: visible to imports from selected files
+
+public int8 age = 22;
+private unsigned int16 year = 2021;
+protected float16 light_level = 0.9996;
+
+
+# printing
 
