@@ -69,6 +69,26 @@ bool b2 = False;
 
 
 # lists
+# a collection of any datatype, specific datatype can be specified via <...>
+# indcies are 0-based
+# size: content + index (maybe)
+# methods:
+# --> min() to get the minimum of the list; only works if single datatype; returns element
+# --> max() to get the maximum of the list; only works if single datatype; returns element
+# --> index() to get the index of a specified element; returns int64
+# --> contains() to check if a certain element exists in the list; returns bool
+# --> length() to get the length of the list (1-based); returns int64
+# --> push() to add an element; default is append, insert if index specified; returns nothing
+# --> pop() to remove an element; default is from end, specific indec if specified; returns nothing
+# --> combine() to combine two lists to one; returns list instance
+
+list l1 = [f3, iu, int8 i5 = 112];
+string l1_min = l1.min();           # ERROR: min() and max() only work for list instances with a specified datatype
+list<int8> l2 = [5, 4, 3, 6, 7];
+int8 l2_max = l2.max();             # l2_max = 7
+bool l2_cont = l2.contains(4);      # l2_cont = False
+int64 l2_ind = l2.index(3);         # get first index of element = 3 --> l2_ind = 2
+l2[l2_ind] = 5;                     # replace value at index 2 with value 5
 
 # maps
 
