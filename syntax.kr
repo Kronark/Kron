@@ -79,7 +79,7 @@ bool b2 = False;
 
 
 
-# CORE
+# OTHER CORE FUNCTIONS
 
 
 # imports
@@ -92,16 +92,15 @@ import "...";
 import "..." grant-file-access;
 
 
-
-
 # visibility
-# --> public: visible to imports
-# --> private: invisible to imports
-# --> protected: visible to imports from selected files
+# --> export: visible to imports
+# otherwise "invisible" or private per default
+# --> can be made visible to certain urls via parameters
 
-public int8 age = 22;
-private unsigned int16 year = 2021;
-protected float16 light_level = 0.9996;
+export int8 age = 22;                       # visible to other files
+unsigned int16 year = 2021;                 # invisible outside of file
+string math-module = "www.kronark.net/kron/math";     # can also be a list of urls / filepaths
+export<math-module> float16 light_level = 0.9996;     # visible to specific module
 
 
 # printing
