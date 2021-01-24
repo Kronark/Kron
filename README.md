@@ -19,6 +19,7 @@ ___
 ___
 
 TODO:
+- Implement OOP (https://mukulrathi.co.uk/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/)
 - Github pygments contribution for syntax highlighting on github (https://github.com/pygments/pygments)
 - Github linguist contribution for language colour in statistics (https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
 - VSCode plugin with syntax highlighting, linting etc. (https://code.visualstudio.com/api/language-extensions/overview)
