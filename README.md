@@ -5,14 +5,17 @@ A fast and scalable high level language that provides frontend and backend capab
 - high memory efficiency
 - high degree of user control (e.g. control of memory usage)
 - simple and exact syntax (as far as allowed by above)
-- wide range of core functionality (frontend and backend)
+- extendible core functionality
 
 Kron uses the .kr file extension for everything.
+
+Every aspect of Kron's functionality is based on libraries called ***Gears***. Gears can define any functionality such as datatypes, operators and functions. The only functionality native to Kron (i.e. doesn't have to be specifically imported) are the import / export capabilities, syntax structuring and language definition syntax. This language definition syntax is used to define new functionality for Kron within Gears.
 
 ___
 
 *HelloWorld.kr*
 ``` kron
+  from core import io, string;
   print "Hello World!";
 ```
 
