@@ -15,7 +15,6 @@ ___
 
 *HelloWorld.kr*
 ``` kron
-  from core import io, string;
   print "Hello World!";
 ```
 
