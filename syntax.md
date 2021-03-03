@@ -1,6 +1,6 @@
 ## **COMMENTS**:
 
-Preceeded by symbol `#` followed by content in simple text form. 
+Preceeded by the symbol `#` followed by content in simple text form. 
 Everything after the `#` symbol is considered part of the comment, which means comments can start after code or take up an entire line themselves.
 
 ``` kron
@@ -22,11 +22,11 @@ Follows the form `TYPE NAME = VALUE`.
 
     integer money = -20560
 
-    float pvalue = 0.0000025
+    array numbers = (427, 0.99)
 
-    vector basis = (1, 0, 0)
+    float pvalue = 0.0000025            # custom float type
 
-    list numbers = [427, 0.99]
+    vector basis = (1, 0, 0)            # custom vector type
 
     decimal alpha = 0.75                # custom decimal type
 
@@ -46,32 +46,16 @@ Kron only provides the bare minimum of built-in datatypes. Everything else is bu
 
 ### ***Integers***:
 
-The only primitive single valued core datatype. The integer value can either be positive or negative and directly maps to the LLVM integer type. 
+The single value core datatype. The integer value can either be positive or negative and directly maps to the LLVM integer type. 
 The bit amount used for storage is determined internally based on the value. 
 Since every form of data used in computers can be represented by an arrangement of numbers, this is all that is needed for Kron's dynamically oriented syntax.
+Integers are defined using the `integer` keyword.
 
-### ***Floats***:
+### ***Arrays***:
 
-The only derived single valued core datatype, as it technically consists of two integers behind the scenes. The float value can either be positive or negative and directly maps to the LLVM float type. The fractional part is separated from the integer part by a `.` period.
-The bit amount used for storage is determined internally based on the value. 
-
-### ***Vectors***:
-
-Vectors are simple aggregate-like datatypes that allow fast simultaneous calculations on multiple instances of the same datatype. Their value can be any amount of the same integer or float datatype separated by commas `,` and enclosed by round brackets `(...)`.
-Their size is variable and can be expanded with the same function calls used for modifying arrays and structures.
-They directly map to the variable sized version of the LLVM vector type.
-
-### ***Lists***:
-
-TODO: maybe just strcuture LLVM type instead
-
-Lists are aggregate datatypes that can contain any datatype and store the data sequentially in memory. Their value can be any amount of any datatype separated by commas `,` and enclosed by square brackets `[...]`. Multiple dimensional arrays are possible by nesting brackets. 
-Their size is variable and can be expanded with the same function calls used for modifying vectors and structures. Internally, the variability is handled by creating a new list if the initial list has no space left and copying the initial list contents to the new list.
-They map to the LLVM array type and are based on python's lists or java's ArrayList objects.
-
-### ***Structures***:
-
-Structures are aggregate datatypes that can contain any datatype and store the data sequentially in memory. 
+The aggregate core datatype. Arrays can contain any datatype and store the data sequentially in memory. Their value can be any amount of datatype values separated by commas `,` and enclosed by round brackets `(...)`. Multiple dimensional arrays are possible by nesting brackets. 
+Their size is variable and can be increased or decreased using built-in functions. Internally, the variability is handled by creating a new list if the initial list has no space left and copying the initial list contents to the new list.
+They map to the LLVM structure type and are based on python's lists or java's ArrayList objects. Arrays are defined using the `array` keyword.
 
 
 
