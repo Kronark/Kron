@@ -13,7 +13,8 @@
 *
 *
 *
-> Corrector that adds semicolons at the end of every statement for easier lexing and removes all comments
+> Corrector that removes all comments, spaces and tabs, then replaces every linebreak with a semicolon (except in special cases like loops or conditionals that don't need a semicolon).
+>> ERROR: some token expected
 *
 *
 *
