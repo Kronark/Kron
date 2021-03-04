@@ -63,13 +63,49 @@ Integers are defined using the `integer` keyword.
 ### ***Arrays***:
 
 The aggregate core datatype. Arrays can contain any datatype and store the data sequentially in memory. Their value can be any amount of datatype values separated by commas `,` and enclosed by round brackets `(...)`. Multiple dimensional arrays are possible by nesting brackets. 
-Their size is variable and can be increased or decreased using built-in functions. Internally, the variability is handled by creating a new list if the initial list has no space left and copying the initial list contents to the new list.
+Their size is variable and can be increased or decreased using how arrays interact with operators. Internally, the variability is handled by creating a new list if the initial list has no space left and copying the initial list contents to the new list.
 They map to the LLVM structure type and are based on python's lists or java's ArrayList objects. Arrays are defined using the `array` keyword.
+
+``` kron
+    array numbers = (1, 2)
+
+    # append a new value
+    numbers = numbers + 3               # (1, 2, 3)
+    numbers += 4                        # (1, 2, 3, 4)
+
+    # insert a new value
+    numbers[-1] += -1                   # (-1, 1, 2, 3, 4)
+    numbers[0] = numbers[0] + 1         # (-1, 1, 1, 2, 3, 4)
+
+    # replace a value
+    numbers[1] = 0                      # (-1, 0, 1, 2, 3, 4)
+    numbers[-1] = 2                     # (0, 1, 2, 3, 4, 2)
+
+    # remove a value
+    numbers -= numers[-1]               # (0, 1, 2, 3, 4)
+    numbers = numbers - numbers[1]      # (0, 2, 3, 4)
+
+    # also works with other arrays
+    numbers += (5, 6)                   # (0, 2, 3, 4, 5, 6)
+    numbers -= numbers[1 : 4]           # (0, 5, 6)
+    numbers[1] += (8, 9)                # (0, 5, 8, 9, 6)
+    numbers[1 : 4] = (1, 2, 3)          # (0, 1, 2, 3, 6)
+```
+
+### ***Functions***:
+
+Functions act as a kind of datatype within Kron. Their 
+
+### ***Custom Types***:
+
+Custom datatypes can be defined using an integrated syntax utilizing the `type` keyword and the `construct` function
 
 
 
 
 ## **OPERATORS**:
+
+Kron only provides the four basic mathematical operations of addition, subtraction, multiplication and division. How custom datatypes react to these operators can be 
 
 
 
